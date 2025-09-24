@@ -67,8 +67,9 @@ export default function Portfolio() {
 
   const skills = [
     "HTML", "CSS", "JavaScript", "TypeScript", "Node.js",
-    "React", "Angular", "Vue", "Tailwind CSS",
-    "Java", "Python", "Git e GitHub", "Bootstrap"
+    "React", "Tailwind CSS", "Python", 
+    "Git e GitHub", "Prisma", "Next", "PostgreSQL",
+    "Web Scraping", "Web automations"
   ];
 
   const handleContactSubmit = (e: React.FormEvent) => {
@@ -83,7 +84,7 @@ export default function Portfolio() {
     description: 'Passionate for developing modern software solutions with cutting-edge technologies',
     email: 'rooger.wallace@gmail.com',
     phone: '+55 98 99195-2221',
-    linkedin: 'https://linkedin.com/in/',
+    linkedin: 'https://www.linkedin.com/in/roger-wallace-690381381',
     github: 'https://github.com/rogerwa11',
     twitter: 'https://twitter.com/',
     whatsapp: 'https://wa.me/5598991952221?text=ol%C3%A1%20Roger%2C%20vim%20pelo%20seu%20portif%C3%B3lio',
