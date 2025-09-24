@@ -56,8 +56,8 @@ export default function Portfolio() {
     },
     {
       id: 2,
-      title: "NeeduK",
-      shortDesc: "Micro-SaaS",
+      title: "Micro-SaaS NeeduK",
+      shortDesc: "Plataforma que conecta vida acadêmica e oportunidades profissionais em um só lugar.",
       fullDesc: "Micro-SaaS para conectar estudantes, empresas e universidades, facilitando oportunidades de estágio, emprego e parcerias educacionais através de um sistema avançado de atividades colaborativas.",
       tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Better Auth", "Prisma", "PostgreSQL", "Zod", "Lucide React"],
       emoji: "📊",
