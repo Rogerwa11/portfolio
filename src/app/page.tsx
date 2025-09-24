@@ -33,7 +33,16 @@ export default function Portfolio() {
       fullDesc: "Portifólio de projetos com informações sobre mim e meus projetos desenvolvido com tecnologias modernas.",
       tech: ["Next.js", "Tailwind CSS", "Lucide-react", "React", "TypeScript"],
       emoji: "💻",
-      link: "https://rogerwallace.vercel.app/"
+      link: "https://portfolio-8nxpyq024-rogerwallaces-projects.vercel.app/"
+    },
+    {
+      id: 2,
+      title: "NeeduK",
+      shortDesc: "Micro-SaaS",
+      fullDesc: "Micro-SaaS para conectar estudantes, empresas e universidades, facilitando oportunidades de estágio, emprego e parcerias educacionais através de um sistema avançado de atividades colaborativas.",
+      tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Better Auth", "Prisma", "PostgreSQL", "Zod", "Lucide React"],
+      emoji: "⚙️",
+      link: "https://github.com/Rogerwa11/needuk-next"
     }
   ];
 
