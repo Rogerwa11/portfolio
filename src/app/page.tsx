@@ -7,6 +7,13 @@ export default function Portfolio() {
   const [expandedProject, setExpandedProject] = useState<number | null>(null);
   const [contactForm, setContactForm] = useState({ name: '', email: '' });
   const [isDarkMode, setIsDarkMode] = useState(true);
+  const [matrixElements, setMatrixElements] = useState<Array<{
+    left: number;
+    top: number;
+    animationDelay: number;
+    animationDuration: number;
+    text: string;
+  }>>([]);
 
   // Load theme preference from memory on mount
   useEffect(() => {
@@ -14,6 +21,18 @@ export default function Portfolio() {
     if (savedTheme) {
       setIsDarkMode(savedTheme === 'dark');
     }
+  }, []);
+
+  // Generate matrix elements on client-side only to avoid hydration mismatch
+  useEffect(() => {
+    const elements = [...Array(50)].map(() => ({
+      left: Math.random() * 100,
+      top: Math.random() * 100,
+      animationDelay: Math.random() * 3,
+      animationDuration: 2 + Math.random() * 2,
+      text: Math.random() > 0.5 ? '1' : '0'
+    }));
+    setMatrixElements(elements);
   }, []);
 
   // Save theme preference to memory
@@ -41,7 +60,7 @@ export default function Portfolio() {
       shortDesc: "Micro-SaaS",
       fullDesc: "Micro-SaaS para conectar estudantes, empresas e universidades, facilitando oportunidades de estágio, emprego e parcerias educacionais através de um sistema avançado de atividades colaborativas.",
       tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Better Auth", "Prisma", "PostgreSQL", "Zod", "Lucide React"],
-      emoji: "⚙️",
+      emoji: "📊",
       link: "https://github.com/Rogerwa11/needuk-next"
     }
   ];
@@ -110,18 +129,18 @@ export default function Portfolio() {
       {/* Matrix-style background */}
       <div className="fixed inset-0 pointer-events-none opacity-5">
         <div className="absolute inset-0">
-          {[...Array(50)].map((_, i) => (
+          {matrixElements.map((element, i) => (
             <div
               key={i}
               className={`absolute ${themeClasses.text} text-xs animate-pulse`}
               style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 3}s`,
-                animationDuration: `${2 + Math.random() * 2}s`
+                left: `${element.left}%`,
+                top: `${element.top}%`,
+                animationDelay: `${element.animationDelay}s`,
+                animationDuration: `${element.animationDuration}s`
               }}
             >
-              {Math.random() > 0.5 ? '1' : '0'}
+              {element.text}
             </div>
           ))}
         </div>
