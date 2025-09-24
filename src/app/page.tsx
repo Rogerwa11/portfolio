@@ -67,7 +67,7 @@ export default function Portfolio() {
 
   const skills = [
     "HTML", "CSS", "JavaScript", "TypeScript", "Node.js",
-    "React", "Tailwind CSS", "Python", 
+    "React", "Tailwind CSS", "Python",
     "Git e GitHub", "Prisma", "Next", "PostgreSQL",
     "Web Scraping", "Web automations"
   ];
@@ -110,14 +110,14 @@ export default function Portfolio() {
       {/* Theme Toggle Button */}
       <button
         onClick={toggleTheme}
-        className={`fixed top-8 right-8 z-50 w-16 h-16 ${themeClasses.border} border-2 ${themeClasses.card} ${themeClasses.hover} transition-all duration-300 transform hover:scale-110 hover:rotate-12 flex items-center justify-center group`}
+        className={`fixed top-4 right-4 sm:top-8 sm:right-8 z-50 w-12 h-12 sm:w-16 sm:h-16 ${themeClasses.border} border-2 ${themeClasses.card} ${themeClasses.hover} transition-all duration-300 transform hover:scale-110 hover:rotate-12 flex items-center justify-center group`}
         aria-label="Toggle theme"
       >
         <div className="relative">
           {isDarkMode ? (
-            <Sun className="w-8 h-8 animate-pulse" />
+            <Sun className="w-6 h-6 sm:w-8 sm:h-8 animate-pulse" />
           ) : (
-            <Moon className="w-8 h-8 animate-pulse" />
+            <Moon className="w-6 h-6 sm:w-8 sm:h-8 animate-pulse" />
           )}
           {/* Corner indicators */}
           <div className={`absolute -top-2 -left-2 w-2 h-2 border-l border-t ${themeClasses.border} group-hover:animate-ping`}></div>
@@ -170,11 +170,11 @@ export default function Portfolio() {
       </div>
 
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center relative px-8">
-        <div className="flex flex-col md:flex-row items-center gap-16 max-w-6xl z-10">
+      <section className="min-h-screen flex items-center justify-center relative px-4 sm:px-8">
+        <div className="flex flex-col md:flex-row items-center gap-8 sm:gap-12 md:gap-16 max-w-6xl z-10">
           {/* Tech Avatar */}
           <div className="relative">
-            <div className={`w-80 h-80 ${themeClasses.border} border-4 rounded-full flex items-center justify-center ${themeClasses.card} shadow-2xl relative overflow-hidden`}>
+            <div className={`w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 ${themeClasses.border} border-4 rounded-full flex items-center justify-center ${themeClasses.card} shadow-2xl relative overflow-hidden`}>
               {/* Inner circuit patterns */}
               <div className="absolute inset-0">
                 {/* Main circuits */}
@@ -198,7 +198,7 @@ export default function Portfolio() {
               </div>
 
               {/* Avatar */}
-              <div className="z-10 relative w-75 h-75 rounded-full overflow-hidden border-4 border-white">
+              <div className="z-10 relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-75 lg:h-75 rounded-full overflow-hidden border-4 border-white">
                 <img
                   src="https://github.com/rogerwa11.png"
                   alt="Roger Wallace"
@@ -227,10 +227,10 @@ export default function Portfolio() {
           {/* Info section */}
           <div className="text-center md:text-left">
             <div className="mb-8">
-              <h1 className={`text-6xl md:text-8xl font-black ${themeClasses.text} mb-4 transform -skew-x-3 tracking-tight`}>
+              <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black ${themeClasses.text} mb-4 transform -skew-x-3 tracking-tight`}>
                 {profile.name.first_name}
               </h1>
-              <h1 className={`text-6xl md:text-8xl font-black ${themeClasses.text} transform skew-x-3 tracking-tight`}>
+              <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black ${themeClasses.text} transform skew-x-3 tracking-tight`}>
                 {profile.name.last_name}
               </h1>
             </div>
@@ -244,33 +244,33 @@ export default function Portfolio() {
             </div>
 
             {/* Social icons */}
-            <div className="flex justify-center md:justify-start gap-6 mb-10">
+            <div className="flex justify-center md:justify-start gap-4 sm:gap-6 mb-8 sm:mb-10">
               <a
                 href={profile.linkedin}
                 target="_blank"
-                className={`w-14 h-14 ${themeClasses.border} border-2 ${themeClasses.card} ${themeClasses.hover} transition-all transform rotate-12 hover:rotate-6 flex items-center justify-center`}
+                className={`w-12 h-12 sm:w-14 sm:h-14 ${themeClasses.border} border-2 ${themeClasses.card} ${themeClasses.hover} transition-all transform rotate-12 hover:rotate-6 flex items-center justify-center`}
               >
-                <Linkedin className="w-7 h-7" />
+                <Linkedin className="w-5 h-5 sm:w-7 sm:h-7" />
               </a>
               <a
                 href={profile.github}
                 target="_blank"
-                className={`w-14 h-14 ${themeClasses.border} border-2 ${themeClasses.card} ${themeClasses.hover} transition-all transform -rotate-12 hover:-rotate-6 flex items-center justify-center`}
+                className={`w-12 h-12 sm:w-14 sm:h-14 ${themeClasses.border} border-2 ${themeClasses.card} ${themeClasses.hover} transition-all transform -rotate-12 hover:-rotate-6 flex items-center justify-center`}
               >
-                <Github className="w-7 h-7" />
+                <Github className="w-5 h-5 sm:w-7 sm:h-7" />
               </a>
               <a
                 href={profile.twitter}
                 target="_blank"
-                className={`w-14 h-14 ${themeClasses.border} border-2 ${themeClasses.card} ${themeClasses.hover} transition-all transform rotate-6 hover:rotate-12 flex items-center justify-center`}
+                className={`w-12 h-12 sm:w-14 sm:h-14 ${themeClasses.border} border-2 ${themeClasses.card} ${themeClasses.hover} transition-all transform rotate-6 hover:rotate-12 flex items-center justify-center`}
               >
-                <Twitter className="w-7 h-7" />
+                <Twitter className="w-5 h-5 sm:w-7 sm:h-7" />
               </a>
             </div>
 
-            <div className={`${themeClasses.border} border-2 ${themeClasses.card} p-6 mb-10 transform -rotate-1 max-w-md`}>
+            <div className={`${themeClasses.border} border-2 ${themeClasses.card} p-4 sm:p-6 mb-10 transform -rotate-1 max-w-md`}>
               <div className="transform rotate-1">
-                <p className={`${themeClasses.textSecondary} leading-relaxed text-lg font-mono`}>
+                <p className={`${themeClasses.textSecondary} leading-relaxed text-base sm:text-lg font-mono`}>
                   {profile.description}
                 </p>
               </div>
@@ -279,7 +279,7 @@ export default function Portfolio() {
             <a
               href="/roger_wallace.pdf"
               download
-              className={`inline-block ${themeClasses.border} border-4 ${themeClasses.card} ${themeClasses.hover} px-10 py-4 font-bold ${themeClasses.text} transform hover:scale-105 transition-all uppercase tracking-wider text-lg`}
+              className={`inline-block ${themeClasses.border} border-4 ${themeClasses.card} ${themeClasses.hover} px-6 sm:px-10 py-3 sm:py-4 font-bold ${themeClasses.text} transform hover:scale-105 transition-all uppercase tracking-wider text-sm sm:text-lg`}
             >
               &gt; DOWNLOAD_CV.pdf
             </a>
@@ -288,26 +288,26 @@ export default function Portfolio() {
       </section>
 
       {/* Projects */}
-      <section className="container mx-auto px-8 py-32 relative z-10">
-        <h2 className={`text-5xl font-black ${themeClasses.text} mb-16 text-center transform -skew-x-2 tracking-wider`}>
+      <section className="container mx-auto px-4 sm:px-8 py-16 sm:py-24 md:py-32 relative z-10">
+        <h2 className={`text-3xl sm:text-4xl md:text-5xl font-black ${themeClasses.text} mb-8 sm:mb-12 md:mb-16 text-center transform -skew-x-2 tracking-wider`}>
           [ PROJECTS.EXE ]
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
           {projects.map((project) => (
             <div key={project.id} className="relative group">
               <div
-                className={`w-full aspect-square ${themeClasses.border} border-2 ${themeClasses.card} cursor-pointer transform hover:scale-105 transition-all flex flex-col items-center justify-center p-8 hover:rotate-2 relative overflow-hidden`}
+                className={`w-full aspect-square ${themeClasses.border} border-2 ${themeClasses.card} cursor-pointer transform hover:scale-105 transition-all flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 hover:rotate-2 relative overflow-hidden`}
                 onClick={() => setExpandedProject(project.id)}
               >
                 {/* Scan line effect */}
                 <div className={`absolute inset-0 bg-gradient-to-r from-transparent ${isDarkMode ? 'via-white/10' : 'via-gray-900/10'} to-transparent -skew-x-12 translate-x-full group-hover:translate-x-[-150%] transition-transform duration-1000`}></div>
 
-                <div className="text-6xl mb-6 animate-pulse">{project.emoji}</div>
-                <h3 className={`font-bold text-center ${themeClasses.text} text-lg mb-3 uppercase tracking-wide`}>
+                <div className="text-4xl sm:text-5xl md:text-6xl mb-4 sm:mb-6 animate-pulse">{project.emoji}</div>
+                <h3 className={`font-bold text-center ${themeClasses.text} text-sm sm:text-base md:text-lg mb-2 sm:mb-3 uppercase tracking-wide`}>
                   {project.title}
                 </h3>
-                <p className={`text-sm ${themeClasses.textMuted} text-center uppercase tracking-wider`}>
+                <p className={`text-xs sm:text-sm ${themeClasses.textMuted} text-center uppercase tracking-wider`}>
                   {project.shortDesc}
                 </p>
 
@@ -325,38 +325,38 @@ export default function Portfolio() {
       {/* Modal */}
       {expandedProject && (
         <div className={`fixed inset-0 ${themeClasses.overlay} flex items-center justify-center z-50 p-4`}>
-          <div className={`${themeClasses.border} border-4 ${themeClasses.card} p-10 max-w-3xl w-full transform rotate-1`}>
+          <div className={`${themeClasses.border} border-4 ${themeClasses.card} p-4 sm:p-6 md:p-10 max-w-sm sm:max-w-2xl md:max-w-3xl w-full transform rotate-1`}>
             <div className="transform -rotate-1">
-              <div className="flex justify-between items-start mb-8">
-                <div className="flex items-center gap-6">
-                  <span className="text-7xl">
+              <div className="flex justify-between items-start mb-6 sm:mb-8">
+                <div className="flex items-center gap-4 sm:gap-6">
+                  <span className="text-5xl sm:text-6xl md:text-7xl">
                     {projects.find(p => p.id === expandedProject)?.emoji}
                   </span>
                   <div>
-                    <h3 className={`text-3xl font-black ${themeClasses.text} uppercase tracking-wider`}>
+                    <h3 className={`text-xl sm:text-2xl md:text-3xl font-black ${themeClasses.text} uppercase tracking-wider`}>
                       {projects.find(p => p.id === expandedProject)?.title}
                     </h3>
                   </div>
                 </div>
                 <button
                   onClick={() => setExpandedProject(null)}
-                  className={`w-12 h-12 ${themeClasses.border} border-2 ${themeClasses.card} ${themeClasses.hover} flex items-center justify-center transition-all`}
+                  className={`w-10 h-10 sm:w-12 sm:h-12 ${themeClasses.border} border-2 ${themeClasses.card} ${themeClasses.hover} flex items-center justify-center transition-all`}
                 >
-                  <X className="w-6 h-6" />
+                  <X className="w-5 h-5 sm:w-6 sm:h-6" />
                 </button>
               </div>
 
-              <div className={`${themeClasses.border} border-2 ${themeClasses.card} p-6 mb-8`}>
-                <p className={`${themeClasses.textSecondary} leading-relaxed text-lg font-mono`}>
+              <div className={`${themeClasses.border} border-2 ${themeClasses.card} p-4 sm:p-6 mb-6 sm:mb-8`}>
+                <p className={`${themeClasses.textSecondary} leading-relaxed text-sm sm:text-base md:text-lg font-mono`}>
                   {projects.find(p => p.id === expandedProject)?.fullDesc}
                 </p>
               </div>
 
-              <div className="flex flex-wrap gap-3 mb-8">
+              <div className="flex flex-wrap gap-2 sm:gap-3 mb-6 sm:mb-8">
                 {projects.find(p => p.id === expandedProject)?.tech.map((tech, index) => (
                   <span
                     key={index}
-                    className={`px-4 py-2 ${themeClasses.border} border ${themeClasses.card} text-sm font-bold uppercase tracking-wide ${themeClasses.text}`}
+                    className={`px-3 sm:px-4 py-1 sm:py-2 ${themeClasses.border} border ${themeClasses.card} text-xs sm:text-sm font-bold uppercase tracking-wide ${themeClasses.text}`}
                   >
                     {tech}
                   </span>
@@ -366,7 +366,7 @@ export default function Portfolio() {
               <a
                 href={projects.find(p => p.id === expandedProject)?.link}
                 target="_blank"
-                className={`inline-block ${themeClasses.border} border-4 ${themeClasses.card} ${themeClasses.hover} px-8 py-4 font-bold ${themeClasses.text} transform hover:scale-105 transition-all uppercase tracking-wider`}
+                className={`inline-block ${themeClasses.border} border-4 ${themeClasses.card} ${themeClasses.hover} px-4 sm:px-6 md:px-8 py-3 sm:py-4 font-bold ${themeClasses.text} transform hover:scale-105 transition-all uppercase tracking-wider text-sm sm:text-base`}
               >
                 &gt; LAUNCH_PROJECT
               </a>
@@ -376,17 +376,17 @@ export default function Portfolio() {
       )}
 
       {/* Skills */}
-      <section className="container mx-auto px-8 py-32 relative z-10">
-        <h2 className={`text-5xl font-black ${themeClasses.text} mb-16 text-center transform skew-x-2 tracking-wider`}>
+      <section className="container mx-auto px-4 sm:px-8 py-16 sm:py-24 md:py-32 relative z-10">
+        <h2 className={`text-3xl sm:text-4xl md:text-5xl font-black ${themeClasses.text} mb-8 sm:mb-12 md:mb-16 text-center transform skew-x-2 tracking-wider`}>
           [ SKILLS.JSON ]
         </h2>
 
-        <div className={`${themeClasses.border} border-4 ${themeClasses.card} p-10 transform -rotate-1`}>
+        <div className={`${themeClasses.border} border-4 ${themeClasses.card} p-4 sm:p-6 md:p-10 transform -rotate-1`}>
           <div className="transform rotate-1">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
               {skills.map((skill, index) => (
-                <div key={index} className={`flex items-center gap-4 ${themeClasses.border} border ${themeClasses.card} p-4 ${themeClasses.hover} transition-all group`}>
-                  <span className={`font-bold text-xl ${themeClasses.text} ${isDarkMode ? 'group-hover:text-black' : 'group-hover:text-gray-100'} transition-colors`}>▶</span>
+                <div key={index} className={`flex items-center gap-3 sm:gap-4 ${themeClasses.border} border ${themeClasses.card} p-3 sm:p-4 ${themeClasses.hover} transition-all group`}>
+                  <span className={`font-bold text-lg sm:text-xl ${themeClasses.text} ${isDarkMode ? 'group-hover:text-black' : 'group-hover:text-gray-100'} transition-colors`}>▶</span>
                   <span className={`font-mono font-medium ${themeClasses.text} ${isDarkMode ? 'group-hover:text-black' : 'group-hover:text-gray-100'} uppercase tracking-wide text-sm transition-colors`}>{skill}</span>
                 </div>
               ))}
@@ -396,12 +396,12 @@ export default function Portfolio() {
       </section>
 
       {/* Contact */}
-      <section className="container mx-auto px-8 py-32 relative z-10">
-        <h2 className={`text-5xl font-black ${themeClasses.text} mb-16 text-center transform -skew-x-2 tracking-wider`}>
+      <section className="container mx-auto px-4 sm:px-8 py-16 sm:py-24 md:py-32 relative z-10">
+        <h2 className={`text-3xl sm:text-4xl md:text-5xl font-black ${themeClasses.text} mb-8 sm:mb-12 md:mb-16 text-center transform -skew-x-2 tracking-wider`}>
           [ CONTACT.INIT() ]
         </h2>
 
-        <div className={`${themeClasses.border} border-4 ${themeClasses.card} p-10 transform rotate-1 max-w-lg mx-auto`}>
+        <div className={`${themeClasses.border} border-4 ${themeClasses.card} p-4 sm:p-6 md:p-10 transform rotate-1 max-w-sm sm:max-w-md md:max-w-lg mx-auto`}>
           <div className="transform -rotate-1">
             <div className={`${themeClasses.border} border-2 ${themeClasses.card} p-4 mb-8`}>
               <p className={`${themeClasses.text} text-center font-mono uppercase tracking-wide`}>
@@ -409,14 +409,14 @@ export default function Portfolio() {
               </p>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               <div>
                 <input
                   type="text"
                   placeholder="// Enter your name"
                   value={contactForm.name}
                   onChange={(e) => setContactForm({ ...contactForm, name: e.target.value })}
-                  className={`w-full px-4 py-4 ${themeClasses.border} border-2 ${themeClasses.card} font-mono font-bold focus:outline-none ${themeClasses.focus} ${themeClasses.text} ${themeClasses.textMuted.replace('text-', 'placeholder-')} uppercase tracking-wide`}
+                  className={`w-full px-3 sm:px-4 py-3 sm:py-4 ${themeClasses.border} border-2 ${themeClasses.card} font-mono font-bold focus:outline-none ${themeClasses.focus} ${themeClasses.text} ${themeClasses.textMuted.replace('text-', 'placeholder-')} uppercase tracking-wide text-sm sm:text-base`}
                 />
               </div>
 
@@ -426,24 +426,24 @@ export default function Portfolio() {
                   placeholder="// Enter your email"
                   value={contactForm.email}
                   onChange={(e) => setContactForm({ ...contactForm, email: e.target.value })}
-                  className={`w-full px-4 py-4 ${themeClasses.border} border-2 ${themeClasses.card} font-mono font-bold focus:outline-none ${themeClasses.focus} ${themeClasses.text} ${themeClasses.textMuted.replace('text-', 'placeholder-')} uppercase tracking-wide`}
+                  className={`w-full px-3 sm:px-4 py-3 sm:py-4 ${themeClasses.border} border-2 ${themeClasses.card} font-mono font-bold focus:outline-none ${themeClasses.focus} ${themeClasses.text} ${themeClasses.textMuted.replace('text-', 'placeholder-')} uppercase tracking-wide text-sm sm:text-base`}
                 />
               </div>
 
               <a
                 href={`mailto:${profile.email}`}
-                className={`w-full ${themeClasses.border} border-4 ${themeClasses.card} ${themeClasses.hover} px-6 py-4 font-bold transform hover:scale-105 transition-all flex items-center justify-center gap-3 ${themeClasses.text} uppercase tracking-wider`}
+                className={`w-full ${themeClasses.border} border-4 ${themeClasses.card} ${themeClasses.hover} px-4 sm:px-6 py-3 sm:py-4 font-bold transform hover:scale-105 transition-all flex items-center justify-center gap-2 sm:gap-3 ${themeClasses.text} uppercase tracking-wider text-sm sm:text-base`}
               >
-                <Mail className="w-5 h-5" />
+                <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
                 &gt; SEND_EMAIL
               </a>
             </div>
 
             <a
               href={profile.whatsapp}
-              className={`w-full mt-6 ${themeClasses.border} border-4 ${themeClasses.card} ${themeClasses.hover} px-6 py-4 font-bold transform hover:scale-105 transition-all flex items-center justify-center gap-3 ${themeClasses.text} uppercase tracking-wider`}
+              className={`w-full mt-4 sm:mt-6 ${themeClasses.border} border-4 ${themeClasses.card} ${themeClasses.hover} px-4 sm:px-6 py-3 sm:py-4 font-bold transform hover:scale-105 transition-all flex items-center justify-center gap-2 sm:gap-3 ${themeClasses.text} uppercase tracking-wider text-sm sm:text-base`}
             >
-              <MessageCircle className="w-5 h-5" />
+              <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" />
               &gt; WHATSAPP.CONNECT()
             </a>
           </div>
@@ -451,11 +451,11 @@ export default function Portfolio() {
       </section>
 
       {/* Footer */}
-      <footer className={`container mx-auto px-8 py-12 text-center ${themeClasses.border} border-t-2 relative z-10`}>
-        <div className={`${themeClasses.border} border-2 ${themeClasses.card} p-6`}>
-          <p className={`${themeClasses.text} font-mono uppercase tracking-wider`}>
+      <footer className={`container mx-auto px-4 sm:px-8 py-8 sm:py-12 text-center ${themeClasses.border} border-t-2 relative z-10`}>
+        <div className={`${themeClasses.border} border-2 ${themeClasses.card} p-4 sm:p-6`}>
+          <p className={`${themeClasses.text} font-mono uppercase tracking-wider text-xs sm:text-sm md:text-base`}>
             © 2024 ROGER_WALLACE | SYSTEM_STATUS:
-            <span className="ml-3 animate-pulse">●</span>
+            <span className="ml-2 sm:ml-3 animate-pulse">●</span>
             <span className="ml-1">ONLINE</span>
           </p>
         </div>
