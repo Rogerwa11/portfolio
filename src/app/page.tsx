@@ -52,7 +52,7 @@ export default function Portfolio() {
       fullDesc: "Portifólio de projetos com informações sobre mim e meus projetos desenvolvido com tecnologias modernas.",
       tech: ["Next.js", "Tailwind CSS", "Lucide-react", "React", "TypeScript"],
       emoji: "💻",
-      link: "https://portfolio-8nxpyq024-rogerwallaces-projects.vercel.app/"
+      link: "https://rogerwa11-portfolio28.vercel.app/"
     },
     {
       id: 2,
